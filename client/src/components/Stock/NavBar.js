@@ -1,0 +1,30 @@
+import React, { Component } from 'react'
+import './NavBar.css'
+
+export default class NavBar extends Component {
+  render() {
+    return(
+      <header>
+
+           <div className="logo headerName">
+                <h1><i class="fas fa-leaf"></i> . <i>Food o'clock</i></h1>
+           </div>
+
+           <ul >
+            <li></li>  
+            <li></li> 
+           <li><a href="/login"><i className="fas fa-home"></i>Home</a></li>
+                
+                <li><a href="#"><i class="fas fa-gifts"></i>Banquet Hall</a></li>
+                <li><a href="/Stock"><i class="fas fa-gifts"></i>Stock</a></li>
+                <li><a href="/employeeHome"><i class="fas fa-gifts"></i>Employee</a></li>
+                
+                <li><a href="#"><i className="fas fa-shopping-cart"></i>Cart</a></li>
+                           
+                <i class="fa-solid fa-burger-fries"></i>           
+                            
+           </ul>   
+       </header>
+    )
+  }
+}

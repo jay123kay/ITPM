@@ -1,0 +1,17 @@
+body {
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.card-group-1 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.card-group-2 {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+@media screen and (max-width: 1000px) {
+  .card-group-1,
+  .card-group-2 {
+    display: block;
+  }
+}

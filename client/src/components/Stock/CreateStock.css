@@ -1,0 +1,9 @@
+.body44 {
+    
+    justify-content: center;
+    align-items: center;
+    background-image: url("1.jpeg");
+    background-size:cover;
+    background-repeat: no-repeat, repeat;
+    padding: 60px;
+  }
