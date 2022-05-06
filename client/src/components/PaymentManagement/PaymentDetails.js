@@ -25,7 +25,7 @@ export default class PaymentDetails extends Component {
   }
   render() {
 
-    const {customerName,category,payment,date,time} = this.state.payment;
+    const {customerName,noofhours,chargeperhour,totalcharge,date,time} = this.state.payment;
     
     return (
       <div className='body2'>
@@ -35,11 +35,14 @@ export default class PaymentDetails extends Component {
 
 
        <dl className="row">
-         <dt className="col-sm-3">Category</dt>
-         <dd className="col-sm-9">{category}</dd>
+         <dt className="col-sm-3">Number of Hours</dt>
+         <dd className="col-sm-9">{noofhours}</dd>
 
-         <dt className="col-sm-3">Payment</dt>
-         <dd className="col-sm-9">{payment}</dd>
+         <dt className="col-sm-3">Charge per Hour</dt>
+         <dd className="col-sm-9">{chargeperhour}</dd>
+
+         <dt className="col-sm-3">Total Charge</dt>
+         <dd className="col-sm-9">{totalcharge}</dd>
 
          <dt className="col-sm-3">Date</dt>
          <dd className="col-sm-9">{date}</dd>

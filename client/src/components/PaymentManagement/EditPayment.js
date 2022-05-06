@@ -8,8 +8,9 @@ export default class EditPayment extends Component {
     super(props);
     this.state={
       customerName:"",
-      category:"",
-      payment:"",
+      noofhours:"",
+      chargeperhour:"",
+      totalcharge:"",
       date:"",
       time:""
     }
@@ -29,12 +30,13 @@ export default class EditPayment extends Component {
 
     e.preventDefault();
     const id = this.props.match.params.id;
-    const {customerName, category, payment, date, time} = this.state;
+    const {customerName, noofhours, chargeperhour, totalcharge, date, time} = this.state;
 
     const data ={
       customerName:customerName,
-      category:category,
-      payment:payment,
+      noofhours:noofhours,
+      chargeperhour:chargeperhour,
+      totalcharge:totalcharge,
       date:date,
       time:time,
     }
@@ -47,8 +49,9 @@ export default class EditPayment extends Component {
         this.setState(
           {
             customerName:"",
-            category:"",
-            payment:"",
+            noofhours:"",
+            chargeperhour:"",
+            totalcharge:"",
             date:"",
             time:"",
           }
@@ -68,8 +71,9 @@ export default class EditPayment extends Component {
       if(res.data.success){
         this.setState({
           customerName:res.data.payment.customerName,
-          category:res.data.payment.category,
-          payment:res.data.payment.payment,
+          noofhours:res.data.payment.noofhours,
+          chargeperhour:res.data.payment.chargeperhour,
+          totalcharge:res.data.payment.totalcharge,
           date:res.data.payment.date,
           time:res.data.payment.time,
         });
@@ -78,6 +82,11 @@ export default class EditPayment extends Component {
       }
     });
   }
+  calculate =(e)=>{
+
+    this.setState({totalcharge:parseInt(this.state.noofhours*this.state.chargeperhour)});
+    e.preventDefault();
+}
 
   render(){
     return(
@@ -96,22 +105,32 @@ export default class EditPayment extends Component {
             </div></div>
 
             <div class="row mb-3">
-            <label for="inputCategory" class="col-sm-2 col-form-label"> Category</label>
+            <label for="inputNoofhours" class="col-sm-2 col-form-label"> Number of Hours</label>
             <div class="col-sm-10">
-            <input type="category" class="form-control" id="inputCategory"
-              name="category"
-              placeholder="Enter Category"
-              value={this.state.category}
+            <input type="noofhours" class="form-control" id="inputNoofhours"
+              name="noofhours"
+              placeholder="Enter  Number of Hours"
+              value={this.state.noofhours}
               onChange={this.handleInputChange}/>
             </div></div>
 
             <div class="row mb-3">
-            <label for="inputPayment" class="col-sm-2 col-form-label">Payment</label>
+            <label for="inputChargeperhour" class="col-sm-2 col-form-label">Charge per Hour</label>
             <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputPayment"
-              placeholder="Enter Payment"
-              name="payment"
-              value={this.state.payment}
+            <input type="chargeperhour" class="form-control" id="inputChargeperhour"
+              name="chargeperhour"
+              placeholder="Enter Charge per Hour"
+              value={this.state.chargeperhour}
+              onChange={this.handleInputChange}/>
+            </div></div>
+
+            <div class="row mb-3">
+            <label for="inputTotalcharge" class="col-sm-2 col-form-label"> Total Charge</label>
+            <div class="col-sm-10">
+            <input type="totalcharge" class="form-control" id="inputTotalcharge"
+              name="totalcharge"
+              placeholder="Enter Total Charge"
+              value={this.state.totalcharge}
               onChange={this.handleInputChange}/>
             </div></div>
 
@@ -143,6 +162,12 @@ export default class EditPayment extends Component {
             <i className="far fa-check-square"></i>
               &nbsp; Update
             </button>
+            <button className="btn btn-success"  type="submit" style={{marginTop:'15px',width:'100px',float: 'right'}} onClick={this.calculate}> 
+                      
+                      &nbsp;Calculate 
+                      <h2>{this.state.totalcharge}</h2>
+                     </button>  
+
           </form>
       </div></div>
     )
