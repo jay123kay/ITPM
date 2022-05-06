@@ -9,6 +9,11 @@ const app = express();
 const bookingRoutes = require('./routes/bookings');
 const paymentRoutes = require('./routes/payments');
 const loginRoutes = require('./routes/logins');
+const stockRoutes = require('./routes/stocks');
+const fruitRoutes = require('./routes/fruits');
+const breadRoutes = require('./routes/breads');
+const employeeRoutes = require('./routes/employees');
+const serverRoutes = require('./routes/servers');
 
 
 
@@ -19,6 +24,11 @@ app.use(cors());
 app.use(bookingRoutes);
 app.use(paymentRoutes);
 app.use(loginRoutes);
+app.use(stockRoutes);
+app.use(fruitRoutes);
+app.use(employeeRoutes);
+app.use(serverRoutes);
+app.use(breadRoutes);
 
 
 
