@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import { Card } from "react-bootstrap";
 
 /*import img1 from '../../assets/reg.jpeg';
 import img2 from '../../assets/patients.jpg';
