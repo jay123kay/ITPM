@@ -8,6 +8,8 @@ const app = express();
 //import routes
 const bookingRoutes = require('./routes/bookings');
 const paymentRoutes = require('./routes/payments');
+const loginRoutes = require('./routes/logins');
+
 
 
 //app middleware
@@ -16,6 +18,8 @@ app.use(cors());
 
 app.use(bookingRoutes);
 app.use(paymentRoutes);
+app.use(loginRoutes);
+
 
 
 const PORT = 8000;
