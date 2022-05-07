@@ -11,9 +11,9 @@ import CreatePayment from './components/PaymentManagement/CreatePayment';
 import PaymentDetails from './components/PaymentManagement/PaymentDetails';
 import EditPayment from './components/PaymentManagement/EditPayment';
 import Login from './components/Login/Login';
-import Home from './components/Home';
 import PaymentMain from './components/PaymentManagement/PaymentMain';
 import PaymentHome from './components/PaymentManagement/PaymentHome';
+import home from './components/home';
 
 
 export default class App extends Component {
@@ -24,7 +24,7 @@ export default class App extends Component {
         <NavBar/>
 
         <Route path="/login" exact component={Login}></Route>
-        <Route path="/home" exact component={Home}></Route>
+        <Route path="/home" exact component={home}></Route>
         <Route path="/" exact component={BookingHome}></Route>
         <Route path="/add" component={CreateBooking}></Route>
         <Route path="/edit/:id" component={EditBooking}></Route>
