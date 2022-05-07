@@ -6,13 +6,15 @@ import EditBooking from './components/BookingManagement/EditBooking';
 import BookingHome from './components/BookingManagement/BookingHome';
 import BookingMain from './components/BookingManagement/BookingMain';
 
-import PaymentHome from './components/PaymentManagement/PaymentHome';
 import NavBar from './components/NavBar';
 import CreatePayment from './components/PaymentManagement/CreatePayment';
 import PaymentDetails from './components/PaymentManagement/PaymentDetails';
 import EditPayment from './components/PaymentManagement/EditPayment';
 import Login from './components/Login/Login';
 import Home from './components/Home';
+import PaymentMain from './components/PaymentManagement/PaymentMain';
+import PaymentHome from './components/PaymentManagement/PaymentHome';
+
 
 export default class App extends Component {
   render() {
@@ -29,6 +31,7 @@ export default class App extends Component {
         <Route path="/booking/:id" component={BookingDetails}></Route>
         <Route path="/main" exact component={BookingMain}></Route>
         <Route path="/payment" exact component={PaymentHome}></Route>
+        <Route path="/paymentm" exact component={PaymentMain}></Route>
         <Route path="/add2" component={CreatePayment}></Route>
         <Route path="/payment/:id" component={PaymentDetails}></Route>
         <Route path="/edit2/:id" component={EditPayment}></Route>
