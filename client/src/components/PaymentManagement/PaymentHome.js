@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import '../BookingManagement/BookingHome.css';
+import jsPDF from "jspdf";
 
 export default class PaymentHome extends Component{
   constructor(props){
@@ -11,10 +12,21 @@ export default class PaymentHome extends Component{
     };
   }
 
+  //Report generation
+  GeneratePDF =()=>{
+    var doc = new jsPDF("p", "pt", "a2", "pdf");
+    doc.html(document.querySelector('#content'),{
+           callback: function(pdf){
+               pdf.save("mypdf.pdf");
+           }
+    });
+  };
+
   componentDidMount(){
     this.retrievePayments();
   }
 
+  //Get all payments
   retrievePayments(){
     axios.get("/payments").then(res =>{
       if(res.data.success){
@@ -26,6 +38,7 @@ export default class PaymentHome extends Component{
     });
   }
 
+  //Delete one payment
   onDelete = (id) =>{
     axios.delete(`/payment/delete/${id}`).then((res) =>{
       alert("Deleted Successfully");
@@ -33,6 +46,7 @@ export default class PaymentHome extends Component{
     })
   }
 
+  //Search data 
   filterData(payments,searchKey){
     const result = payments.filter((payment) =>
     payment.customerName.toLowerCase().includes(searchKey) ||
@@ -57,10 +71,10 @@ export default class PaymentHome extends Component{
     });
   }
 
-  
+  //Output
   render(){
     return(
-      <div className='body'>
+      <div className='body' id="content">
       <div className="row">
         <div className="col-lg-9 mt-2 mb-2">
           <h2>Payments</h2>
@@ -117,6 +131,8 @@ export default class PaymentHome extends Component{
           </tbody>
         </table>
         <button className="btn btn-success"><a href="/add2" style={{textDecoration:'none', color:'white'}}>Create New Payment</a></button>
+        <button className="btn3 button3" onClick={this.GeneratePDF} type="primary">Print the Report</button>
+
       </div>
     )
     } }

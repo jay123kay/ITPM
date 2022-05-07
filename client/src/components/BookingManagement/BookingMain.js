@@ -67,7 +67,7 @@ class BookingMain extends Component {
                     Reserve Hall
                   </a>
                  
-                  <h5 className='text2'><br></br>Visit us to confirm your dream!</h5>
+                  <h5 className='text2'><br></br>View the list of reservations</h5>
                 </div>
                 <div className="text-center">
                   <a
@@ -77,13 +77,13 @@ class BookingMain extends Component {
                       fontWeight: '700',
                       letterSpacing: '.03em',
                       textTransform: 'uppercase',
-                      padding: '16px 56px',
+                      padding: '16px 44px',
                       borderRadius: '6px'
                     }}
 
                     href="/" 
                     role="button">
-                    Request Visit
+                    Reservation List
                   </a>
                  
                 </div>

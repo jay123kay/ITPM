@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import './BookingHome.css';
+import jsPDF from "jspdf";
 
 export default class BookingHome extends Component{
   constructor(props){
@@ -11,10 +12,20 @@ export default class BookingHome extends Component{
     };
   }
 
+//Report generation
+  GeneratePDF =()=>{
+    var doc = new jsPDF("p", "pt", "a2", "pdf");
+    doc.html(document.querySelector('#content'),{
+           callback: function(pdf){
+               pdf.save("mypdf.pdf");
+           }
+    });
+  };
+
   componentDidMount(){
     this.retrieveBookings();
   }
-
+//Get all bookings
   retrieveBookings(){
     axios.get("/bookings").then(res =>{
       if(res.data.success){
@@ -26,6 +37,7 @@ export default class BookingHome extends Component{
     });
   }
 
+  //Delete a relevent booking
   onDelete = (id) =>{
     axios.delete(`/booking/delete/${id}`).then((res) =>{
       alert("Deleted Successfully");
@@ -33,6 +45,7 @@ export default class BookingHome extends Component{
     })
   }
 
+  //search a booking
   filterData(bookings,searchKey){
     const result = bookings.filter((booking) =>
     booking.customerName.toLowerCase().includes(searchKey) ||
@@ -61,13 +74,13 @@ export default class BookingHome extends Component{
   }
 
 
-  
+ //Output 
   render(){
     return(
-      <div className='body'>
+      <div className='body' id="content">
       <div className="row">
         <div className="col-lg-9 mt-2 mb-2">
-          <h2>Banquet Hall Bookings</h2>
+          <h2>Banquet Hall Reservations</h2>
         </div>
         <div className="col-lg-3 mt-2 mb-2">
           <input
