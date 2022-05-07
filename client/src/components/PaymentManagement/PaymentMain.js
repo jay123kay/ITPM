@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Background from '../assets/pay.jpg';
+import Background from '../../assets/pay.jpg';
 import '../BookingManagement/BookingMain.css';
 
 
@@ -30,8 +30,10 @@ class PaymentMain extends Component {
                 <div className="display-4 text-center">
                 </div>
                 
-                <div className="text-center"><br></br>
-              
+                <div className="text-center">
+                <h5 className='text2'><br></br>Banquet Hall Reservation payments</h5>
+                </div>
+                <div className="text-center">
 
                   <a
                     className="btn btn-warning btn-primary mb-3"
@@ -44,11 +46,11 @@ class PaymentMain extends Component {
                       borderRadius: '6px'
                     }}
 
-                    href="/" 
+                    href="payment" 
                     role="button">
-                    Dine in and Takeaway
+                   Hall Reservation
                   </a>
-                  <h5 className='text2'><br></br>Researve a hall today!</h5>
+                  <h5 className='text2'><br></br>Dine-in and Takeaway payments</h5>
                 </div>
                 <div className="text-center">
                   <a
@@ -58,16 +60,16 @@ class PaymentMain extends Component {
                       fontWeight: '700',
                       letterSpacing: '.03em',
                       textTransform: 'uppercase',
-                      padding: '16px 56px',
+                      padding: '16px 52px',
                       borderRadius: '6px'
                     }}
 
-                    href="/add" 
+                    href="..." 
                     role="button">
-                    Home Delivery
+                   Dine-in / Takeaway         
                   </a>
                  
-                  <h5 className='text2'><br></br>Visit us to confirm your dream!</h5>
+                  <h5 className='text2'><br></br>Home Delivery payments</h5>
                 </div>
                 <div className="text-center">
                   <a
@@ -77,13 +79,13 @@ class PaymentMain extends Component {
                       fontWeight: '700',
                       letterSpacing: '.03em',
                       textTransform: 'uppercase',
-                      padding: '16px 56px',
+                      padding: '16px 70px',
                       borderRadius: '6px'
                     }}
 
-                    href="/add2" 
+                    href="..." 
                     role="button">
-                    Banquet Hall Reservation
+                    Home Delivery
                   </a>
                  
                 </div>
