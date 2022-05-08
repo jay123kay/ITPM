@@ -74,6 +74,7 @@ export default class PaymentHome extends Component{
   //Output
   render(){
     return(
+      
       <div className='body' id="content">
       <div className="row">
         <div className="col-lg-9 mt-2 mb-2">
@@ -131,8 +132,9 @@ export default class PaymentHome extends Component{
           </tbody>
         </table>
         <button className="btn btn-success"><a href="/add2" style={{textDecoration:'none', color:'white'}}>Create New Payment</a></button>
-        <button className="btn3 button3" onClick={this.GeneratePDF} type="primary">Print the Report</button>
+              
+              <button className="btn3 button3" style={{float:"right"}} onClick={this.GeneratePDF} type="primary">Generate Report</button>
+        </div>
 
-      </div>
     )
     } }

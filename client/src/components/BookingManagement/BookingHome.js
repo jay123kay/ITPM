@@ -136,6 +136,9 @@ export default class BookingHome extends Component{
           </tbody>
         </table>
         <button className="btn btn-success"><a href="/add" style={{textDecoration:'none', color:'white'}}>Create New Booking</a></button>
+
+        <button className="btn3 button3" style={{float:"right"}} onClick={this.GeneratePDF} type="primary">Generate Report</button>
+
       </div>
     )
     } }
