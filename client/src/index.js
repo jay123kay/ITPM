@@ -1,22 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import AppStock from './AppStock';
-import AppFruit from './AppFruit';
-import AppBread from './AppBread';
-import AppEmployee from './AppEmployee';
-import AppServer from './AppServer';
+import App1 from './App1';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
-    <AppStock />
-    <AppEmployee />
-    <AppServer />
-    <AppFruit />
-    <AppBread />
-  
+    <App1 />
   </React.StrictMode>,
   document.getElementById('root')
 );
