@@ -6,45 +6,35 @@ const cors = require('cors');
 const app = express();
 
 //import routes
-const bookingRoutes = require('./routes/bookings');
-const paymentRoutes = require('./routes/payments');
-const loginRoutes = require('./routes/logins');
-const stockRoutes = require('./routes/stocks');
-const fruitRoutes = require('./routes/fruits');
-const breadRoutes = require('./routes/breads');
-const employeeRoutes = require('./routes/employees');
-const serverRoutes = require('./routes/servers');
-
-
+const postRoutes = require('./routes/posts');
+const orderRoutes = require('./routes/orders');
 
 //app middleware
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use(bookingRoutes);
-app.use(paymentRoutes);
-app.use(loginRoutes);
-app.use(stockRoutes);
-app.use(fruitRoutes);
-app.use(employeeRoutes);
-app.use(serverRoutes);
-app.use(breadRoutes);
+app.use(postRoutes);
+app.use(orderRoutes);
 
-
+//route middleware
+app.use(postRoutes);
+app.use(orderRoutes);
 
 const PORT = 8000;
-const DB_URL ='mongodb+srv://Kavya:itpm@itpm.8d8uh.mongodb.net/ITPM?retryWrites=true&w=majority'
+const DB_URL = 'mongodb+srv://Sarangi:itpm@itpm.8d8uh.mongodb.net/ITPM?retryWrites=true&w=majority';
 
 mongoose.connect(DB_URL,{
-    useNewUrlParser: true,
-    useUnifiedTopology:true
+
+    useNewUrlParser: true,          //Remove warnings
+    useUnifiedTopology: true
 
 })
 .then(() =>{
-    console.log('DB connected');
+    console.log('DB Connected');
 })
-.catch((err) => console.log('DB connection error', err))
+.catch((err) => console.log('DB Connection Error',err));
 
-app.listen(PORT, ()=>{
+
+app.listen(PORT, () => {
     console.log(`App is running on ${PORT}`);
 });
