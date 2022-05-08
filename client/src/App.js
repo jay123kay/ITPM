@@ -6,14 +6,13 @@ import EditBooking from './components/BookingManagement/EditBooking';
 import BookingHome from './components/BookingManagement/BookingHome';
 import BookingMain from './components/BookingManagement/BookingMain';
 
-import NavBar from './components/NavBar';
+
 import CreatePayment from './components/PaymentManagement/CreatePayment';
 import PaymentDetails from './components/PaymentManagement/PaymentDetails';
 import EditPayment from './components/PaymentManagement/EditPayment';
-import Login from './components/Login/Login';
 import PaymentMain from './components/PaymentManagement/PaymentMain';
 import PaymentHome from './components/PaymentManagement/PaymentHome';
-import home from './components/home';
+
 
 
 export default class App extends Component {
@@ -21,10 +20,9 @@ export default class App extends Component {
     return (
       <BrowserRouter>
       <div className="container">
-        <NavBar/>
 
-        <Route path="/login" exact component={Login}></Route>
-        <Route path="/home" exact component={home}></Route>
+        
+        
         <Route path="/mainb" exact component={BookingMain}></Route>
         <Route path="/homeb" exact component={BookingHome}></Route>
         <Route path="/add" component={CreateBooking}></Route>
