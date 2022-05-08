@@ -69,7 +69,7 @@ export default class CreatePayment extends Component {
 
   render(){
     return(
-      <div className='body1'>
+      <div className='bodybc'>
       <div classNAme="col-md-8 mt-4 mx-auto">
         <h2 className-="h3 mb-3 font-weight-normal"> Payment</h2><br></br>
           <form className="needs-validation" noValidate>
@@ -107,7 +107,7 @@ export default class CreatePayment extends Component {
             <label for="inputTotalcharge" class="col-sm-2 col-form-label">Total Charge</label>
             <div class="col-sm-10">
             <input type="text" class="form-control" id="inputTotalcharge"
-              placeholder="EnternTotal Charge"
+              placeholder="Enter Total Charge"
               name="totalcharge"
               value={this.state.totalcharge}
               onChange={this.handleInputChange}/>

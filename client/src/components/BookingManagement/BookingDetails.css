@@ -1,9 +1,8 @@
-.body2 {
-    justify-content: center;
-    align-items: center;
-    background-image: url("../../assets/bg.png");
-    background-size: cover;
-    background-repeat: no-repeat, repeat;
-    padding: 60px;
-  }
-  
+.bodybd {
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../assets/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat, repeat;
+  padding: 60px;
+}

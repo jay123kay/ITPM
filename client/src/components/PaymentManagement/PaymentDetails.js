@@ -28,7 +28,7 @@ export default class PaymentDetails extends Component {
     const {customerName,noofhours,chargeperhour,totalcharge,date,time} = this.state.payment;
     
     return (
-      <div className='body2'>
+      <div className='bodybd'>
      <div style={{marginTop:'20px'}}>
        <h4>{customerName}</h4>
        <hr/>

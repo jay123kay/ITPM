@@ -77,7 +77,7 @@ export default class BookingHome extends Component{
  //Output 
   render(){
     return(
-      <div className='body' id="content">
+      <div className='bodyb' id="content">
       <div className="row">
         <div className="col-lg-9 mt-2 mb-2">
           <h2>Banquet Hall Reservations</h2>

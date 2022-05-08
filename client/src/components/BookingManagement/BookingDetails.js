@@ -28,7 +28,7 @@ export default class BookingDetails extends Component {
     const {customerName,email,event,eventDate,eventStart,eventEnd,noOfGuests} = this.state.booking;
     
     return (
-      <div className='body2'>
+      <div className='bodybd'>
      <div style={{marginTop:'20px'}}>
        <h4>{customerName}</h4>
        <hr/>

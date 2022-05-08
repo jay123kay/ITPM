@@ -90,7 +90,7 @@ export default class EditBooking extends Component {
 
   render(){
     return(
-      <div className='body1'>
+      <div className='bodybc'>
       <div classNAme="col-md-8 mt-4 mx-auto">
         <h2 className-="h3 mb-3 font-weight-normal">Edit booking</h2><br></br>
           <form className="needs-validation" noValidate>

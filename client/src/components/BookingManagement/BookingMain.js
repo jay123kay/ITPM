@@ -81,7 +81,7 @@ class BookingMain extends Component {
                       borderRadius: '6px'
                     }}
 
-                    href="/" 
+                    href="/homeb" 
                     role="button">
                     Reservation List
                   </a>

@@ -14,7 +14,7 @@ export default class PaymentHome extends Component{
 
   //Report generation
   GeneratePDF =()=>{
-    var doc = new jsPDF("p", "pt", "a2", "pdf");
+    var doc = new jsPDF("p", "pt", "b2", "pdf");
     doc.html(document.querySelector('#content'),{
            callback: function(pdf){
                pdf.save("mypdf.pdf");
@@ -75,7 +75,7 @@ export default class PaymentHome extends Component{
   render(){
     return(
       
-      <div className='body' id="content">
+      <div className='bodyb' id="content">
       <div className="row">
         <div className="col-lg-9 mt-2 mb-2">
           <h2>Payments</h2>
