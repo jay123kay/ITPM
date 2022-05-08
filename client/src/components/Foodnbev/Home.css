@@ -1,0 +1,8 @@
+.body {
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../assets/bg_img.jpeg");
+    background-size:cover;
+    background-repeat: no-repeat, repeat;
+    padding: 60px;
+  }
