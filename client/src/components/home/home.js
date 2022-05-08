@@ -112,7 +112,7 @@ function home(){
                             
 
 <br></br>
-                            <button className="btn_home">Set Information</button>
+                            <button className="btn_home"><a href="/OrderHome">Set Information</a></button>
                     </center>
 <br></br>
 
@@ -196,7 +196,7 @@ function home(){
                             
 
 <br></br>
-                    <button className="btn_home">View Page</button>
+                    <button className="btn_home"><a href="Home">View Page</a></button>
                     </center>
 <br></br>
 
