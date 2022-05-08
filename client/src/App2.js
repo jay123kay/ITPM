@@ -11,7 +11,7 @@ export default class App2 extends Component {
       <BrowserRouter>
       <div className="container">
         <NavBar/>
-        <Route path="/" exact component={OrderHome}></Route>
+        <Route path="/orderHome" exact component={OrderHome}></Route>
         <Route path="/add" component={CreateOrder}></Route>
         <Route path="/post/:id" component={OrderDetails}></Route>
       </div>
