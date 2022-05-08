@@ -6,6 +6,8 @@ import Stock from './components/Stock/Stock';
 import StockDetails from './components/Stock/StockDetails';
 import StockHome from './components/Stock/StockHome';
 import NavBar from './components/Stock/NavBar';
+import about from './components/about/about';
+
 
 
 export default class AppStock extends Component {
@@ -19,6 +21,7 @@ export default class AppStock extends Component {
         <Route path="/add" component={CreateStock}></Route>
         <Route path="/edit/:id" component={EditStock}></Route>
         <Route path="/postStock/:id" component={StockDetails}></Route>
+        <Route path="/about" exact component={about}></Route>
       
         
       </div>
