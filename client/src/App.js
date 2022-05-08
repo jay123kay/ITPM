@@ -25,11 +25,11 @@ export default class App extends Component {
 
         <Route path="/login" exact component={Login}></Route>
         <Route path="/home" exact component={home}></Route>
-        <Route path="/" exact component={BookingHome}></Route>
+        <Route path="/mainb" exact component={BookingMain}></Route>
+        <Route path="/homeb" exact component={BookingHome}></Route>
         <Route path="/add" component={CreateBooking}></Route>
         <Route path="/edit/:id" component={EditBooking}></Route>
         <Route path="/booking/:id" component={BookingDetails}></Route>
-        <Route path="/main" exact component={BookingMain}></Route>
         <Route path="/payment" exact component={PaymentHome}></Route>
         <Route path="/paymentm" exact component={PaymentMain}></Route>
         <Route path="/add2" component={CreatePayment}></Route>
