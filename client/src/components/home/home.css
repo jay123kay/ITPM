@@ -1,0 +1,61 @@
+.home_para_box_1 {
+    width: 75%;
+    height: 100px;
+  }
+
+  .home_pg_b2{
+    background-color: rgb(65, 66, 66);
+  }
+
+  .home_pg_b2_f_color{
+      color: cornsilk;
+  }
+
+  .home_pg_b3{
+      background-color: rgb(124, 114, 70);
+  }
+
+ .right_align {
+   text-align: right;
+  } 
+
+  .btn_home{
+    background-color: rgb(70, 67, 67); 
+    color: rgb(248, 246, 246); 
+    border: 2px solid #131212;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    margin: 10px 0px;
+  }
+  .btn_home:hover{
+    background-color: #4f4f39;
+    color: white;
+  }
+  .back_g_home{
+    background-image:('/static/images/leaf-graphic.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+
+  }
+
+  .offer_home{
+      font-size: medium;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: black;
+     
+  }
+
+  .home_additional{
+    border-color: rgb(247, 245, 245);
+    color: rgb(7, 7, 7);
+  }
+
+  .additional{
+    padding: 10px;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
